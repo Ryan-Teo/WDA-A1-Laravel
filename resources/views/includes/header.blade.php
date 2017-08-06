@@ -12,5 +12,5 @@
             </li>
         </ul>
     </nav>
-    <h3 class="text-muted">ITS Online Support</h3>
+    <h3 class="text-muted">ITS Online Support </h3>
 </div>
