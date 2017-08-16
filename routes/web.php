@@ -15,5 +15,8 @@ Route::get('/', function () {
     return view('pages/home');
 });
 
+Route::resource('inquiries','InquiryController');
+
 Route::get('about','ControllerPages@about');
 Route::get('contact','ControllerPages@contact');
+

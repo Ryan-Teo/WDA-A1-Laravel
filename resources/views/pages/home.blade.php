@@ -50,7 +50,7 @@
             <h1>Have issues? </h1>
             <p>Please give us some enquiry related to any technical issues that you might have or if you need to
                 apply any online services that are supported by RMIT. We'll be gladly to help you!</p>
-            <p><a class="btn btn-primary btn-lg">Click me</a></p>
+            <p><a href="{{ url('inquiries/create') }}" class="btn btn-primary btn-lg">Click me</a></p>
         </div>
     </div>
 
