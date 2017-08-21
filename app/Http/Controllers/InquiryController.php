@@ -7,6 +7,7 @@ use App\Inquiry;
 use App\User;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\InquiryFormRequest;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Session;
 class InquiryController extends Controller
 {
@@ -17,16 +18,28 @@ class InquiryController extends Controller
         return view('inquiries.create', ['inquiry' => $inquiry ,'names' => $names]);
     }
 
-    public function store(Request $request)
+    public function store(InquiryFormRequest $request)
     {
+
+        $this->validate($request, [
+            'user_name' => 'required',
+            'os' => 'required|max:255',
+            'software_issue' => 'required|max:255',
+            'status' => 'required',
+        ]);
+
         $inquiry = new Inquiry;
-        $inquiry->user_name = $request->user_name;
-        $inquiry->user_email = $request->user_email;
+        $user = User::find($request->user_name);
+        $inquiry->user_name = $user->name;
+        $inquiry->user_email = $user->email;
         $inquiry->os = $request->os;
         $inquiry->software_issue = $request->software_issue;
+        $inquiry->comment = $request;
         $inquiry->status = $request->status;
-        $inquiry->comment = $request->comment;
-        $user = User::find($request->user_name);
+
+//        $request->session()->put('user_id',$user );
+//        $request->session()->put('user_name',$user->name );
+
         $inquiry->user()->associate($user);
 
         $inquiry->save();

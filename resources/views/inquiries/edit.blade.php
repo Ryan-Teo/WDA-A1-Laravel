@@ -7,7 +7,7 @@
                 <h2>Edit Inquiry</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('InquiryController.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('inquiries.index') }}"> Back</a>
             </div>
         </div>
     </div>
