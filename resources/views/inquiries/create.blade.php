@@ -25,8 +25,8 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    {!! Form::model($inquiry, ['action' => 'InquiryController@store']) !!}
 
+    {!! Form::model($inquiry, ['action' => 'InquiryController@store']) !!}
     <div class="form-group">
         {!! Form::label('user_name', 'Name') !!}
         {{ Form::select('user_name', $names, null, ['class' => 'form-control']) }}
@@ -53,6 +53,5 @@
 
 
     <button class="btn btn-success" type="submit">Submit</button>
-
     {!! Form::close() !!}
 @endsection

@@ -18,6 +18,7 @@ Route::get('faq', function(){
     return view('pages/faq');
 });
 Route::get('/admin', 'InquiryController@index');
+Route::get('/inquiries/index', 'InquiryController@index');
 Route::resource('inquiries','InquiryController');
 Route::resource('users','UserController');
 

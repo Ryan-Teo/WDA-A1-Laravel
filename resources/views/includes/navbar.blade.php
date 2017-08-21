@@ -14,7 +14,7 @@
                 </a>
                 <li><a href="{{ url('/users/create') }}">Create Account</a></li>
                 <li><a href="{{ url('/inquiries/create') }}">Send enquiry</a></li>
-                <li><a href="#">Track Progress</a></li>
+                <li><a href="{{ url('/inquiries/index') }}">Track Progress</a></li>
                 <li><a href="{{ url('/faq') }}">FAQ</a></li>
             </ul>
         </div>
