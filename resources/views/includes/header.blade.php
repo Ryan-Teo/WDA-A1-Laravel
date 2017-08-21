@@ -1,32 +1,21 @@
-<div class="navbar navbar-default navbar-fixed-top">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>IT Support @yield('title')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ asset('css/usebootstrap.css') }}" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
     <div class="container">
-        <div class="navbar-header">
-            <a href="http://localhost/WDA-1/public" class="navbar-brand">IT Online Support</a>
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+        <div class = "panel panel-heading col-lg-12 mx-auto">
+            <img class="img-responsive" style="max-width: 25%"  src="img/ITS Logo.png" alt="ITS Logo goes here">
         </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Menu <span class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="themes">
-                        <li><a href="{{ url('inquiries/create') }}">Send enquiry</a></li>
-                        <li><a href="{{ url('inquiries/index') }}">Track Progress</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" target="_blank">Feedback</a></li>
-            </ul>
-
-        </div>
-
     </div>
-</div>
+</head>

@@ -1,6 +1,6 @@
-@include('includes.head')
+@include('includes.header')
 <body>
-    @include('includes.header')
+    @include('includes.navbar')
     <div class="container">
         @yield('content')
     </div>
