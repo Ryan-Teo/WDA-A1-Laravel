@@ -10,14 +10,18 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                {!! Form::label('status', 'Pending') !!}
+
                 {{ Form::radio('status', 'pending') }}
-                {!! Form::label('status', 'Resolved') !!}
+                {!! Form::label('status', 'Pending') !!}
+                <br>
                 {{ Form::radio('status', 'resolved') }}
-                {!! Form::label('status', 'Unresolved') !!}
+                {!! Form::label('status', 'Resolved') !!}
+                <br>
                 {{ Form::radio('status', 'unresolved') }}
-                {!! Form::label('status', 'Closed') !!}
+                {!! Form::label('status', 'Unresolved') !!}
+                <br>
                 {{ Form::radio('status', 'closed') }}
+                {!! Form::label('status', 'Closed') !!}
             </div>
 
         </div>
