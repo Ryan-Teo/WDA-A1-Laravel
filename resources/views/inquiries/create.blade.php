@@ -32,10 +32,6 @@
         {{ Form::select('user_name', $names, null, ['class' => 'form-control']) }}
     </div>
 
-    <div class="form-group">
-        {!! Form::label('user_email', 'Email') !!}
-        {!! Form::text('user_email','', ['class' => 'form-control']) !!}
-    </div>
 
     <div class="form-group">
         {!! Form::label('os', 'Operating System') !!}
@@ -52,7 +48,7 @@
     </div>
 
     <div class="form-group">
-        {{ Form::hidden('comment','for admin only') }}
+        {{ Form::hidden('comment','admin use only') }}
     </div>
 
 

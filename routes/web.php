@@ -16,7 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', 'InquiryController@index');
-
 Route::resource('inquiries','InquiryController');
 Route::resource('users','UserController');
 

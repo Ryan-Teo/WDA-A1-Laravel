@@ -27,7 +27,6 @@ class InquiryFormRequest extends FormRequest
     {
         return [
             'user_name' => 'required|max:255',
-            'user_email' => 'required|email|max:255',
             'os' => 'required|max:255',
             'software_issue' => 'required',
             'status' => 'required',

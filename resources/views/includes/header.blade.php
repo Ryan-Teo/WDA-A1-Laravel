@@ -14,8 +14,8 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Menu <span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="themes">
-                        <li><a href="http://localhost/WDA-1/public/inquiries/create">Send enquiry</a></li>
-                        <li><a href="#">Track Progress</a></li>
+                        <li><a href="{{ url('inquiries/create') }}">Send enquiry</a></li>
+                        <li><a href="{{ url('inquiries/index') }}">Track Progress</a></li>
                         <li class="divider"></li>
                         <li><a href="#">FAQ</a></li>
                     </ul>
