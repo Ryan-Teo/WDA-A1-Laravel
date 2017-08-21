@@ -28,32 +28,35 @@
     {!! Form::model($inquiry, ['action' => 'InquiryController@store']) !!}
 
     <div class="form-group">
-        {!! Form::label('cust_name', 'Name') !!}
-        {!! Form::text('cust_name', '', ['class' => 'form-control']) !!}
+        {!! Form::label('user_name', 'Name') !!}
+        {{ Form::select('user_name', $names, null, ['class' => 'form-control']) }}
     </div>
 
     <div class="form-group">
-        {!! Form::label('cust_email', 'email') !!}
-        {!! Form::text('cust_email', '', ['class' => 'form-control']) !!}
+        {!! Form::label('user_email', 'Email') !!}
+        {!! Form::text('user_email','', ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('service_area', 'Service Area') !!}
-        {!! Form::text('service_area', '', ['class' => 'form-control']) !!}
+        {!! Form::label('os', 'Operating System') !!}
+        {!! Form::text('os', '', ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('subject', 'Subject') !!}
-        {!! Form::text('subject', '', ['class' => 'form-control']) !!}
+        {!! Form::label('software_issue', 'Software Issue') !!}
+        {!! Form::text('software_issue','', ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('description', 'Description') !!}
-        {!! Form::text('description', '', ['class' => 'form-control']) !!}
+        {{ Form::hidden('status', 'pending') }}
+    </div>
+
+    <div class="form-group">
+        {{ Form::hidden('comment','for admin only') }}
     </div>
 
 
-    <button class="btn btn-success" type="submit">Add the Car!</button>
+    <button class="btn btn-success" type="submit">Submit</button>
 
     {!! Form::close() !!}
 @endsection

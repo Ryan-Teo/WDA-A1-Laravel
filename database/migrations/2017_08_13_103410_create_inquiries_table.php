@@ -15,11 +15,11 @@ class CreateInquiriesTable extends Migration
     {
         Schema::create('inquiries', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cust_name');
-            $table->string('cust_email');
-            $table->string('service_area');
-            $table->string('subject');
-            $table->string('description');
+            $table->string('user_email');
+            $table->string('user_name');
+            $table->string('os');
+            $table->string('software_issue');
+            $table->string('status');
             $table->timestamps();
         });
     }

@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Inquiry extends Model
 {
     protected $fillable = [
-        'cust_name','cust_email','service_area','subject','description',
+        'user_email','user_name','os','software_issue','status','comment'
     ];
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
 }

@@ -35,6 +35,12 @@ Ticket :
     Description:
     Issued Date:
     
+    
+Tables :
+
+         User(Name,Email)
+         Inquiry(Id,subject,service_area_description,name*,email*)
+         Comment(user_name*,inquiry_id*,user_comments)
                
         
             
