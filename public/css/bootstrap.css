@@ -307,6 +307,9 @@ figure {
 img {
   vertical-align: middle;
 }
+.headerimg{
+  max-width: 25%;
+}
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -5895,4 +5898,14 @@ table .info a,
 .panel-footer {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }

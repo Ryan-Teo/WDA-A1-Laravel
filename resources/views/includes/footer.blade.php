@@ -1,10 +1,10 @@
 <footer class="footer">
-    <div class="row navbar-fixed-bottom">
+    <div class="row ">
         <div class="col-lg-6 pull-left">
-            <p>&copy; ABCD Company 2017</p>
+            <p class="text-muted">&copy; ABCD Company 2017</p>
         </div>
         <div class="col-lg-6 pull-right">
-            <p>Made by : Harry Utomo & Ryan Teo</p>
+            <p class="text-muted">Made by : Harry Utomo & Ryan Teo</p>
         </div>
     </div>
 </footer>
