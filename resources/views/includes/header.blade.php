@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('css/usebootstrap.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}" media="screen">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ asset('/js/customJquery.js') }}"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
