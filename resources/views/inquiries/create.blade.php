@@ -27,52 +27,52 @@
     @endif
 
     {!! Form::model($inquiry, ['action' => 'InquiryController@store']) !!}
-        <div class="form-group">
-            {!! Form::label('user_name', 'Name') !!}
-            {{ Form::select('user_name', $names, "Please make a selection", ['class' => 'form-control user-name' ]) }}
-        </div>
+    <div class="form-group">
+        {!! Form::label('user_name', 'Name') !!}
+        {{ Form::select('user_name', $names, "Please make a selection", ['class' => 'form-control user-name' ]) }}
+    </div>
 
-        <div class="form-group">
-            {!! Form::label('email', 'Email') !!}
-            {{ Form::select('email', $users->pluck("email") ,null, ['class' => 'form-control user-email', 'disabled' ,'readonly' => 'readonly']) }}
-        </div>
+    <div class="form-group">
+        {!! Form::label('email', 'Email') !!}
+        {{ Form::select('email', $users->pluck("email") ,null, ['class' => 'form-control user-email', 'disabled' ,'readonly' => 'readonly']) }}
+    </div>
 
-        <div class="form-group">
-            {!! Form::label('os', 'Operating System') !!}
-            {!! Form::text('os', '', ['class' => 'form-control']) !!}
-        </div>
+    <div class="form-group">
+        {!! Form::label('os', 'Operating System') !!}
+        {!! Form::text('os', '', ['class' => 'form-control']) !!}
+    </div>
 
-        <div class="form-group">
-            {!! Form::label('software_issue', 'Software Issue') !!}
-            {!! Form::text('software_issue','', ['class' => 'form-control']) !!}
-        </div>
-        <div class="form-group">
-            {!! Form::label('description', 'Additional Comments') !!}
-            {!! Form::textarea('description','', ['class' => 'form-control']) !!}
-        </div>
+    <div class="form-group">
+        {!! Form::label('software_issue', 'Software Issue') !!}
+        {!! Form::text('software_issue','', ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('description', 'Additional Comments') !!}
+        {!! Form::textarea('description','', ['class' => 'form-control']) !!}
+    </div>
 
-{{--<<<<<<< HEAD--}}
+    {{--<<<<<<< HEAD--}}
     {{--<div class="form-group">--}}
-        {{--{!! Form::label('description', 'Issue Description') !!}--}}
-        {{--{!! Form::text('description','', ['class' => 'form-control']) !!}--}}
+    {{--{!! Form::label('description', 'Issue Description') !!}--}}
+    {{--{!! Form::text('description','', ['class' => 'form-control']) !!}--}}
     {{--</div>--}}
 
     {{--<div class="form-group">--}}
-        {{--{{ Form::hidden('status', 'pending') }}--}}
+    {{--{{ Form::hidden('status', 'pending') }}--}}
     {{--</div>--}}
-{{--=======--}}
-    
-        <div class="form-group">
-            {{ Form::hidden('status', 'pending') }}
-        </div>
+    {{--=======--}}
 
-        <div class="form-group">
-            {{ Form::hidden('comment','admin use only') }}
-        </div>
+    <div class="form-group">
+        {{ Form::hidden('status', 'pending') }}
+    </div>
+
+    <div class="form-group">
+        {{ Form::hidden('comment','admin use only') }}
+    </div>
 
 
-        <button class="btn btn-success pull-right" type="submit">Submit</button>
+    <button class="btn btn-success pull-right" type="submit">Submit</button>
 
-        <a class="pull-left" href="{{ url('/users/create') }}">Don't have an account? Sign up for one!</a>
+    <a class="pull-left" href="{{ url('/users/create') }}">Don't have an account? Sign up for one!</a>
     {!! Form::close() !!}
 @endsection

@@ -87,7 +87,7 @@ class InquiryController extends Controller
     public function edit($id)
     {
         $inquiry= Inquiry::find($id);
-        
+
         return view('inquiries.edit',compact('inquiry'));
     }
 
