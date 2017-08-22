@@ -26,7 +26,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Comments:</strong>
-                {!! Form::textarea('comments', null, array('placeholder' => 'Details',
+                {!! Form::textarea('comment', null, array('placeholder' => 'Details',
                 'class' => 'form-control','style'=>'height:100px')) !!}
             </div>
         </div>
