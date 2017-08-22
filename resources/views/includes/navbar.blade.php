@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="{{ Request::root() }}"><img src="{{ url('img/ITS Logo.png') }}" alt="ITS Logo goes here">
+                    <a class="navbar-brand" href="{{ url('') }}"><img src="{{ url('img/ITS Logo.png') }}" alt="ITS Logo goes here">
                     </a>
                     <div class="navbar-header navbar-right">
                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
@@ -26,6 +26,4 @@
             </div>
         </div>
     </div>
-
-
 </div>
