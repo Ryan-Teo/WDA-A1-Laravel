@@ -18,17 +18,26 @@
     <br>
     <p class="p1">
          <span class="s1">
-            <b>How long does the process take?<br></b>
+            <b>How long do I have to wait for a reply?<br></b>
          </span>
-        Usually it only takes about 2 to 3 working days for an inquiry to be processed.
-        We definitely will get back to your problem and give you as much help as we can.
+        We usually get back to you in 1-2 business days
     </p>
     <br>
     <p class="p1">
          <span class="s1">
             <b>Can I ask <br></b>
+
+             <b>My <i>*insert device name here*</i> does not work. What do I do?<br></b>
          </span>
-        Click on the Menu button above and send us an enquiry!
+        Did you try turning it off and on again?
+    </p>
+    <br>
+    <p class="p1">
+         <span class="s1">
+             <b>It still dosen't work!!!<br></b>
+         </span>
+        Send us an enquiry and we'll get back to you ASAP. Be sure to track the progress of your ticket, we'll send
+        you updates via email too!
     </p>
     <br>
 </div>

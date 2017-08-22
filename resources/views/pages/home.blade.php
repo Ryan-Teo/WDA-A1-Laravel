@@ -7,48 +7,19 @@
 @section('content')
     <div class="container">
             <div class="page-header" id="banner">
-                <div class="row">
+                <div class="row" >
                     <div class="col-lg-6">
                         <h1>Welcome</h1>
-                        <p class="lead">To the new RMIT ITS Online Support Website.</p>
+                        <p class="lead">To the new RMIT ITS Online Support Website</p>
                     </div>
                 </div>
             </div>
 
         <div class ="row">
-            <div class ="col-md-4">
-                <h2>What we do.</h2>
-                <div class="text-justify">
-                    <p>We solve all your techincal problems. </p>
-                    <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-                    <p><small>This line of text is meant to be treated as fine print.</small></p>
-                    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-                    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-                    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
-                </div>
-            </div>
-            <div class ="col-md-4">
-                <h2>How to check your enquiry status.</h2>
-                <div class="text-justify">
-                    <p>We solve all your techincal problems. </p>
-                    <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-                    <p><small>This line of text is meant to be treated as fine print.</small></p>
-                    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-                    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-                    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
-                </div>
-            </div>
-            <div class ="col-md-4">
-                <h2>Give us Feedback.</h2>
-                <div class="text-justify">
-                    <p>We solve all your techincal problems. </p>
-                    <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-                    <p><small>This line of text is meant to be treated as fine print.</small></p>
-                    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-                    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-                    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
-                </div>
->>>>>>> 8ee071e1b762e3460372bee2cd0b9286801a771c
+            <div class ="col-lg-6 col-md-12">
+                <h2>What we do</h2>
+                <p>We solve all your techincal problems. Problems with your wireless setup? Need more storage space? Just can't seem to get particular software runnning on your compuer?</p>
+                <p><strong>We've got you.</strong></p>
             </div>
         </div>
 
@@ -58,6 +29,19 @@
             <p>Please give us some enquiry related to any technical issues that you might have or if you need to
                 apply any online services that are supported by RMIT. We'll be gladly to help you!</p>
             <p><a href="{{ url('inquiries/create') }}" class="btn btn-primary btn-lg">Click me</a></p>
+            <div class ="col-lg-6 col-md-12">
+                <h2>How to check your enquiry status</h2>
+                <p>Simply click the "Track Progress" button at the top of the page.</p>
+                <p>Alternatively, <a href="{{ url('/inquiries/index') }}">click here</a>.</p>
+            </div>
+        </div>
+
+        <div class="jumbotron bot-banner">
+            <div class="row">
+                <h1>Have a problem? </h1>
+                <p>Go ahead and send us an enquiry! We'll be glad to help you!</p>
+                <p><a href="{{ url('inquiries/create') }}" class="btn btn-primary btn-lg pull-right">Send Enquiry</a></p>
+            </div>
         </div>
     </div>
 @endsection
