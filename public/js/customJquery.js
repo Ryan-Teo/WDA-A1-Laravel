@@ -3,5 +3,4 @@ $(document).ready(function(){
         var userVal = $(this).val();
         $(".user-email").val(userVal-1);
     });
-
 });
