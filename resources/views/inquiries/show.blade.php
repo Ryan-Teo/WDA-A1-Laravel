@@ -6,7 +6,6 @@
             <div class="pull-left">
                 <h2> Your enquiry</h2>
             </div>
-
         </div>
     </div>
     <table class="table table-bordered">
@@ -38,8 +37,9 @@
             <td>{{ $inquiry['status']}}</td>
         </tr>
     </table>
+
     <div class="pull-right">
-        <a class="btn btn-primary" href="{{ route('inquiries.index') }}"> Back</a>
+        <a class="btn btn-primary" href="{{ route('inquiries.index') }}">Track Enquiries >></a>
     </div>
 
 @endsection
