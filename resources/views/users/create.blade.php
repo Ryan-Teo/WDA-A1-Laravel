@@ -27,13 +27,22 @@
     @endif
     {!! Form::model($user, ['action' => 'UserController@store']) !!}
 
-    <div class="form-group">
-        {!! Form::label('name', 'Name') !!}
-        {!! Form::text('name', '', ['class' => 'form-control']) !!}
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="form-group">
+                {!! Form::label('name', 'First Name') !!}
+                {!! Form::text('name', '', ['class' => 'form-control']) !!}
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="form-group">
+                {!! Form::label('name', 'Last Name') !!}
+                {!! Form::text('name', '', ['class' => 'form-control']) !!}
+            </div>
+        </div>
     </div>
-
     <div class="form-group">
-        {!! Form::label('email', 'email') !!}
+        {!! Form::label('email', 'Email') !!}
         {!! Form::text('email', '', ['class' => 'form-control']) !!}
     </div>
 

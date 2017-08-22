@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div class="row">
-        {!! Form::close() !!}    {!! Form::model($inquiry, ['method' => 'PATCH','route' => ['inquiries.update', $inquiry->id]]) !!}
+        {!! Form::model($inquiry, ['method' => 'PATCH','route' => ['inquiries.update', $inquiry->id]]) !!}
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Comments:</strong>

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Make your enquiry</h2>
+                <h2>Make enquiry</h2>
             </div>
         </div>
     </div>
@@ -46,6 +46,10 @@
             {!! Form::label('software_issue', 'Software Issue') !!}
             {!! Form::text('software_issue','', ['class' => 'form-control']) !!}
         </div>
+        <div class="form-group">
+            {!! Form::label('additional_comments', 'Additional Comments') !!}
+            {!! Form::textarea('additional_comments','', ['class' => 'form-control']) !!}
+        </div>
 
         <div class="form-group">
             {{ Form::hidden('status', 'pending') }}
@@ -57,5 +61,7 @@
 
 
         <button class="btn btn-success" type="submit">Submit</button>
+
+        <a class="pull-right" href="{{ url('/users/create') }}">Don't have an account? Sign up for one!</a>
     {!! Form::close() !!}
 @endsection

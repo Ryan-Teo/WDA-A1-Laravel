@@ -21,7 +21,5 @@
             </ul>
         </div>
     @endif
-    {!! Form::model($inquiry, ['method' => 'PATCH','route' => ['inquiries/update', $inquiry->id]]) !!}
-
     @include('inquiries.form')
 @endsection

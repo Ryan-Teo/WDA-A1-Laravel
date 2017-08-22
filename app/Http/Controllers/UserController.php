@@ -24,12 +24,12 @@ class UserController extends Controller
         ]);
 
         User::create($request->all());
-        return redirect()->route('users.create') ->with('success','User is created successfully');
+        return redirect()->route('inquiries.create') ->with('success','User is created successfully');
     }
 
     public function getUser($user_id){
         $user = User::find($user_id);
-        return $user->info;
+
     }
 
 }
