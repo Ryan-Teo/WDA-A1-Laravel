@@ -34,7 +34,7 @@ class InquiryController extends Controller
         $inquiry->user_email = $user->email;
         $inquiry->os = $request->os;
         $inquiry->software_issue = $request->software_issue;
-        $inquiry->comment = $request;
+        $inquiry->comment = $request->comment;
         $inquiry->status = $request->status;
 
 //        $request->session()->put('user_id',$user );
