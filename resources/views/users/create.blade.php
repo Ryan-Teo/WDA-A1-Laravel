@@ -37,7 +37,7 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="form-group">
                 {!! Form::label('name', 'Last Name') !!}
-                {!! Form::text('name', '', ['class' => 'form-control']) !!}
+                {!! Form::text('last_name', '', ['class' => 'form-control']) !!}
             </div>
         </div>
     </div>

@@ -47,8 +47,8 @@
             {!! Form::text('software_issue','', ['class' => 'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::label('additional_comments', 'Additional Comments') !!}
-            {!! Form::textarea('additional_comments','', ['class' => 'form-control']) !!}
+            {!! Form::label('description', 'Additional Comments') !!}
+            {!! Form::textarea('description','', ['class' => 'form-control']) !!}
         </div>
 
 {{--<<<<<<< HEAD--}}
