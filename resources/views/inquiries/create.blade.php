@@ -34,7 +34,7 @@
 
         <div class="form-group">
             {!! Form::label('email', 'Email') !!}
-            {{ Form::select('email', $users->pluck("email") ,null, ['class' => 'form-control email', 'disabled' ,'readonly' => 'readonly']) }}
+            {{ Form::select('email', $users->pluck("email") ,null, ['class' => 'form-control user-email', 'disabled' ,'readonly' => 'readonly']) }}
         </div>
 
         <div class="form-group">
