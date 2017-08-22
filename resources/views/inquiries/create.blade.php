@@ -44,6 +44,11 @@
     </div>
 
     <div class="form-group">
+        {!! Form::label('description', 'Issue Description') !!}
+        {!! Form::text('description','', ['class' => 'form-control']) !!}
+    </div>
+
+    <div class="form-group">
         {{ Form::hidden('status', 'pending') }}
     </div>
 

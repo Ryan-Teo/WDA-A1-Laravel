@@ -35,10 +35,8 @@ class InquiryController extends Controller
         $inquiry->os = $request->os;
         $inquiry->software_issue = $request->software_issue;
         $inquiry->comment = $request->comment;
+        $inquiry->description = $request->description;
         $inquiry->status = $request->status;
-
-//        $request->session()->put('user_id',$user );
-//        $request->session()->put('user_name',$user->name );
 
         $inquiry->user()->associate($user);
 
@@ -56,6 +54,13 @@ class InquiryController extends Controller
     {
         $inquiries = Inquiry::orderBy('id','DESC')->paginate(5);
         return view('inquiries.index',compact('inquiries')) ->with('i', ($request->input('page', 1) - 1) * 5);
+
+    }
+
+    public function admin(Request $request)
+    {
+        $inquiries = Inquiry::orderBy('id','DESC')->paginate(5);
+        return view('inquiries.admin',compact('inquiries')) ->with('i', ($request->input('page', 1) - 1) * 5);
 
     }
 
@@ -80,6 +85,7 @@ class InquiryController extends Controller
     public function edit($id)
     {
         $inquiry= Inquiry::find($id);
+        
         return view('inquiries.edit',compact('inquiry'));
     }
 

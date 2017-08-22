@@ -30,6 +30,7 @@ class InquiryFormRequest extends FormRequest
             'os' => 'required|max:255',
             'software_issue' => 'required',
             'status' => 'required',
+            'description' => 'required|max:255'
 
         ];
     }

@@ -35,7 +35,7 @@
                 <td>{{ $inquiry->status}}</td>
                 <td>
                     <a class="btn btn-info" href="{{ route('inquiries.show',$inquiry->id) }}">Show</a>
-                    {{--<a class="btn btn-primary" href="{{ route('inquiries.edit',$inquiry->id) }}">Edit</a>--}}
+                    <a class="btn btn-primary" href="{{ route('inquiries.edit',$inquiry->id) }}">Edit</a>
                     {{--{!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}--}}
                     {!! Form::close() !!}
                 </td>
