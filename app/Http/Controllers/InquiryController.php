@@ -14,8 +14,9 @@ class InquiryController extends Controller
     public function create()
     {
         $users = User::all();
+        $names = User::pluck('name', 'id');
         $inquiry = new Inquiry;
-        return view('inquiries.create', ['inquiry' => $inquiry ,'users' => $users]);
+        return view('inquiries.create', ['inquiry' => $inquiry ,'users' => $users, 'names'=>$names]);
     }
 
     public function store(InquiryFormRequest $request)
