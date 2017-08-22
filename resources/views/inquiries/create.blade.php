@@ -29,7 +29,7 @@
     {!! Form::model($inquiry, ['action' => 'InquiryController@store']) !!}
     <div class="form-group">
         {!! Form::label('user_name', 'Name') !!}
-        {{ Form::select('user_name', , null, ['class' => 'form-control']) }}
+        {{ Form::select('user_name', null, ['class' => 'form-control']) }}
     </div>
 
 
