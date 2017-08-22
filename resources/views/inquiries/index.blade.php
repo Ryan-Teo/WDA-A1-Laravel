@@ -5,9 +5,6 @@
             <div class="pull-left">
                 <h2>Inquiries</h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('inquiries.create') }}">Create new</a>
-            </div>
         </div>
     </div>
     @if ($message = Session::get('success'))

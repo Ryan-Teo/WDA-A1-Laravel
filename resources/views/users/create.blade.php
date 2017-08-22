@@ -49,7 +49,7 @@
 
 
 
-    <button class="btn btn-success" type="submit">Submit</button>
+    <button class="btn btn-success pull-right" type="submit">Submit</button>
 
     {!! Form::close() !!}
 @endsection

@@ -29,7 +29,7 @@
     {!! Form::model($inquiry, ['action' => 'InquiryController@store']) !!}
         <div class="form-group">
             {!! Form::label('user_name', 'Name') !!}
-            {{ Form::select('user_name', $users->pluck("name"), null, ['class' => 'form-control user-name' ]) }}
+            {{ Form::select('user_name', $users->pluck("name"), "Please make a selection", ['class' => 'form-control user-name' ]) }}
         </div>
 
         <div class="form-group">
@@ -60,8 +60,8 @@
         </div>
 
 
-        <button class="btn btn-success" type="submit">Submit</button>
+        <button class="btn btn-success pull-right" type="submit">Submit</button>
 
-        <a class="pull-right" href="{{ url('/users/create') }}">Don't have an account? Sign up for one!</a>
+        <a class="pull-left" href="{{ url('/users/create') }}">Don't have an account? Sign up for one!</a>
     {!! Form::close() !!}
 @endsection
