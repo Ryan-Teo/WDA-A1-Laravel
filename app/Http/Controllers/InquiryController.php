@@ -58,6 +58,7 @@ class InquiryController extends Controller
 
     }
 
+
     public function admin(Request $request)
     {
         $inquiries = Inquiry::orderBy('id','DESC')->paginate(5);
