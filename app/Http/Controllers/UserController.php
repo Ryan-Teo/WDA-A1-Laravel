@@ -27,4 +27,9 @@ class UserController extends Controller
         return redirect()->route('users.create') ->with('success','User is created successfully');
     }
 
+    public function getUser($user_id){
+        $user = User::find($user_id);
+        return $user->info;
+    }
+
 }
