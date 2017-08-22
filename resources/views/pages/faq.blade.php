@@ -18,14 +18,15 @@
     <br>
     <p class="p1">
          <span class="s1">
-            <b>How do I get help for IT support?<br></b>
+            <b>How long does the process take?<br></b>
          </span>
-        Click on the Menu button above and send us an enquiry!
+        Usually it only takes about 2 to 3 working days for an inquiry to be processed.
+        We definitely will get back to your problem and give you as much help as we can.
     </p>
     <br>
     <p class="p1">
          <span class="s1">
-            <b>How do I get help for IT support?<br></b>
+            <b>Can I ask <br></b>
          </span>
         Click on the Menu button above and send us an enquiry!
     </p>
