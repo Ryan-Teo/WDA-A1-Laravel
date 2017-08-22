@@ -47,10 +47,21 @@
             {!! Form::text('software_issue','', ['class' => 'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::label('additional_comments', 'Additional Comments') !!}
-            {!! Form::textarea('additional_comments','', ['class' => 'form-control']) !!}
+            {!! Form::label('description', 'Additional Comments') !!}
+            {!! Form::textarea('description','', ['class' => 'form-control']) !!}
         </div>
 
+{{--<<<<<<< HEAD--}}
+    {{--<div class="form-group">--}}
+        {{--{!! Form::label('description', 'Issue Description') !!}--}}
+        {{--{!! Form::text('description','', ['class' => 'form-control']) !!}--}}
+    {{--</div>--}}
+
+    {{--<div class="form-group">--}}
+        {{--{{ Form::hidden('status', 'pending') }}--}}
+    {{--</div>--}}
+{{--=======--}}
+    
         <div class="form-group">
             {{ Form::hidden('status', 'pending') }}
         </div>

@@ -23,7 +23,14 @@ class UserController extends Controller
             'email' => 'required|email|unique:users',
         ]);
 
-        User::create($request->all());
+        $user = new User();
+        $first_name = $request->name;
+        $last_name = $request->last_name;
+        $user->name = $first_name.' '.$last_name;
+        $user->email = $request->email;
+
+        $user->save();
+
         return redirect()->route('inquiries.create') ->with('success','User is created successfully');
     }
 

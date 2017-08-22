@@ -5,6 +5,9 @@
             <div class="pull-left">
                 <h2>Inquiries</h2>
             </div>
+            <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('inquiries.create') }}">Create new</a>
+            </div>
         </div>
     </div>
     @if ($message = Session::get('success'))
@@ -32,7 +35,7 @@
                 <td>{{ $inquiry->status}}</td>
                 <td>
                     <a class="btn btn-info" href="{{ route('inquiries.show',$inquiry->id) }}">Show</a>
-                    {{--<a class="btn btn-primary" href="{{ route('inquiries.edit',$inquiry->id) }}">Edit</a>--}}
+                    <a class="btn btn-primary" href="{{ route('inquiries.edit',$inquiry->id) }}">Edit</a>
                     {{--{!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}--}}
                     {!! Form::close() !!}
                 </td>

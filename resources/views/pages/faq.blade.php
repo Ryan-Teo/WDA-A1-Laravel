@@ -25,6 +25,8 @@
     <br>
     <p class="p1">
          <span class="s1">
+            <b>Can I ask <br></b>
+
              <b>My <i>*insert device name here*</i> does not work. What do I do?<br></b>
          </span>
         Did you try turning it off and on again?
