@@ -14,8 +14,9 @@ class InquiryController extends Controller
     public function create()
     {
         $users = User::all();
+        $names = User::pluck('name', 'id');
         $inquiry = new Inquiry;
-        return view('inquiries.create', ['inquiry' => $inquiry ,'users' => $users]);
+        return view('inquiries.create', ['inquiry' => $inquiry ,'users' => $users, 'names'=>$names]);
     }
 
     public function store(InquiryFormRequest $request)
@@ -29,10 +30,9 @@ class InquiryController extends Controller
         ]);
 
         $inquiry = new Inquiry;
-        $name = User::find($request->user_name);
-        $user = User::where('name', '=',$name)->get();
-        $inquiry->user_name = $request->name;
-        $inquiry->user_email = $request->email;
+        $user = User::find($request->user_name);
+        $inquiry->user_name = $user->name;
+        $inquiry->user_email = $user->email;
         $inquiry->os = $request->os;
         $inquiry->software_issue = $request->software_issue;
         $inquiry->comment = $request->comment;
