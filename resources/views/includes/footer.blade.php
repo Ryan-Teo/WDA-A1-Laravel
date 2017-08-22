@@ -1,9 +1,12 @@
 <footer class="footer">
     <div class="row ">
-        <div class="col-lg-6 pull-left">
+        <div class="col-lg-4 pull-left">
             <p class="text-muted">&copy; ABCD Company 2017</p>
         </div>
-        <div class="col-lg-6 pull-right">
+        <div class="col-lg-4 ">
+            <a href="{{ url('/admin') }}"><p class="text-muted">admin</p></a>
+        </div>
+        <div class="col-lg-4 pull-right">
             <p class="text-muted">Made by : Harry Utomo & Ryan Teo</p>
         </div>
     </div>
