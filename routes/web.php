@@ -15,6 +15,7 @@ Route::get('/', function () {return view('pages/home');});
 Route::get('faq', function(){return view('pages/faq');});
 Route::get('/admin', 'InquiryController@admin');
 Route::get('/inquiries/index', 'InquiryController@index');
+
 Route::resource('inquiries','InquiryController');
 Route::resource('users','UserController');
 

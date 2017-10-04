@@ -28,6 +28,7 @@
                     </button>
 
                     <!-- Branding Image -->
+                    {{--goes to homepage or root--}}
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
