@@ -63,6 +63,5 @@
 
     <button class="btn btn-success pull-right" type="submit">Submit</button>
 
-    <a class="pull-left" href="{{ url('/users/create') }}">Don't have an account? Sign up for one!</a>
     {!! Form::close() !!}
 @endsection

@@ -38,9 +38,9 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li><a href="{{ url('/inquiries/create') }}">Make enquiry</a></li>
+                                <li><a href="{{ url('/inquiries/index') }}">Track Progress</a></li>
                             @endif
-                            <li><a href="{{ url('/inquiries/create') }}">Make enquiry</a></li>
-                            <li><a href="{{ url('/inquiries/index') }}">Track Progress</a></li>
                             <li><a href="{{ url('/faq') }}">FAQ</a></li>
                         </ul>
                     </div>
