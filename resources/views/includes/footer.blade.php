@@ -7,7 +7,7 @@
             <a href="{{ url('/admin') }}"><p class="text-muted">admin</p></a>
         </div>
         <div class="col-lg-5 col-md-5 col-sm-5 pull-right">
-            <p class="text-muted">Made by : Harry Utomo & Ryan Teo</p>
+            <p class="text-muted">Made by : Harry Utomo (s3510376) & Ryan Teo (s3444615)</p>
         </div>
     </div>
 </footer>
