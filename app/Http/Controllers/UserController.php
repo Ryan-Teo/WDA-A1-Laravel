@@ -16,7 +16,7 @@ class UserController extends Controller
         return view('users.create', ['user' => $user ]);
     }
 
-    public function store(Request $request)
+    public function store(UserFormRequest $request)
     {
         $this->validate($request, [
             'name' => 'required',

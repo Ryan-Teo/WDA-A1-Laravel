@@ -16,6 +16,7 @@
                     <div class="navbar-collapse collapse" id="navbar-main">
                         <ul class="nav navbar-nav ">
                             <li><a href="{{ url('/users/create') }}">Create Account</a></li>
+                            <li><a href="{{ url('/auth/login') }}">Sign in</a></li>
                             <li><a href="{{ url('/inquiries/create') }}">Make enquiry</a></li>
                             <li><a href="{{ url('/inquiries/index') }}">Track Progress</a></li>
                             <li><a href="{{ url('/faq') }}">FAQ</a></li>

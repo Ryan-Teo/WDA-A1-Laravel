@@ -45,6 +45,14 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'helpdesk' => [
+            'driver' => 'session',
+            'provider' => 'helpdesks',
+        ],
+        'helpdesk_api' => [
+            'driver' => 'token',
+            'provider' => 'helpdesks',
+        ],
     ],
 
     /*
@@ -68,7 +76,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
-        ],
+        ],'helpdesks' => [
+            'driver' => 'eloquent',
+            'model' => App\Helpdesk::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
@@ -94,6 +105,11 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'helpdesks' => [
+            'provider' => 'helpdesks',
             'table' => 'password_resets',
             'expire' => 60,
         ],

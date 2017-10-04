@@ -18,6 +18,17 @@ Route::get('/inquiries/index', 'InquiryController@index');
 Route::resource('inquiries','InquiryController');
 Route::resource('users','UserController');
 
+
 Route::get('about','ControllerPages@about');
 Route::get('contact','ControllerPages@contact');
 
+Route::prefix('helpdesk')->group(function (){
+    Route::get('/login','Auth\HelpdeskLoginController@showLoginForm')->name('helpdesk.login');
+    Route::post('/login','Auth\HelpdeskLoginController@login')->name('helpdesk.login.submit');
+    Route::get('/','HelpdeskController@index')->name('helpdesk.dashboard');
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
