@@ -63,7 +63,10 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <a href="{{URL::previous()}}" class="btn btn-default pull-left">
+                                    Back
+                                </a>
+                                <button type="submit" class="btn btn-primary pull-right">
                                     Register
                                 </button>
                             </div>

@@ -29,12 +29,12 @@
     {!! Form::model($inquiry, ['action' => 'InquiryController@store']) !!}
     <div class="form-group">
         {!! Form::label('user_name', 'Name') !!}
-        {{ Form::select('user_name', $names, "Please make a selection", ['class' => 'form-control user-name' ]) }}
+        {!! Form::text('user_name', Auth::user()->name, ['class' => 'form-control user-name','readonly']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('email', 'Email') !!}
-        {{ Form::select('email', $users->pluck("email") ,null, ['class' => 'form-control user-email', 'disabled' ,'readonly' => 'readonly']) }}
+        {!! Form::text('email', Auth::user()->email , ['class' => 'form-control user-email','readonly']) !!}
     </div>
 
     <div class="form-group">

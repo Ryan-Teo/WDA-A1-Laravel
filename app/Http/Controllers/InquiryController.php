@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\InquiryFormRequest;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+
 class InquiryController extends Controller
 {
 
@@ -36,7 +38,7 @@ class InquiryController extends Controller
         ]);
 
         $inquiry = new Inquiry;
-        $user = User::find($request->user_name);
+        $user = Auth::user();
         $inquiry->user_name = $user->name;
         $inquiry->user_email = $user->email;
         $inquiry->os = $request->os;
