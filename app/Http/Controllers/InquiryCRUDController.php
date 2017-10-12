@@ -32,6 +32,7 @@ class InquiryCRUDController extends Controller
             $inquiry->os = $request->os;
             $inquiry->software_issue = $request->software_issue;
             $inquiry->comment = $request->comment;
+            $inquiry->user_id = $request->user_id;
             $inquiry->description = $request->description;
             $inquiry->status = $request->status;
 
@@ -75,7 +76,9 @@ class InquiryCRUDController extends Controller
                 'status' => 'required',
                 'comment' => 'max:255|min:5',
             ]);
-            $inquiry = Inquiry::find($id)->update($request->all());
+            $inquiry = Inquiry::find($id);
+            $inquiry->comment = $request->comment;
+            $inquiry->status = $request->status;
 
             $saved = $inquiry->save();
 
