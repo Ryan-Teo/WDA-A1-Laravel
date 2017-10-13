@@ -51,10 +51,21 @@
         {!! Form::textarea('description','', ['class' => 'form-control']) !!}
     </div>
 
-
+    {{--Status is pending by default --}}
     <div class="form-group">
         {{ Form::hidden('status', 'pending') }}
     </div>
+
+    {{--when inquiry is first submitte is low by default--}}
+    <div class="form-group">
+        {{ Form::hidden('priority', 'low') }}
+    </div>
+
+    {{--when inquiry is first submitted is 0 by default--}}
+    <div class="form-group">
+        {{ Form::hidden('level', 1) }}
+    </div>
+
 
     <div class="form-group">
         {{ Form::hidden('comment','admin use only') }}

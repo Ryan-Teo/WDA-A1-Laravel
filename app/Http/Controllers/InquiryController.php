@@ -34,7 +34,7 @@ class InquiryController extends Controller
             'user_name' => 'required',
             'os' => 'required|max:255',
             'software_issue' => 'required|max:255',
-            'status' => 'required',
+            'status' => 'required'
         ]);
 
         $inquiry = new Inquiry;

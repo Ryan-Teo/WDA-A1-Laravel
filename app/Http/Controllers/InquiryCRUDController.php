@@ -9,6 +9,7 @@ use Illuminate\Validation\Rules\In;
 
 class InquiryCRUDController extends Controller
 {
+    //get and list all inquiries
     public function index(Request $request)
     {
         $inquiries = Inquiry::all();
@@ -16,10 +17,7 @@ class InquiryCRUDController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * Store a newly created inquiry in storage.
      */
     public function store(Request $request)
     {
@@ -35,6 +33,8 @@ class InquiryCRUDController extends Controller
             $inquiry->user_id = $request->user_id;
             $inquiry->description = $request->description;
             $inquiry->status = $request->status;
+            $inquiry->priority = $request->priority;
+            $inquiry->level = $request->level;
 
             $saved = $inquiry->save();
 
@@ -51,10 +51,7 @@ class InquiryCRUDController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Display the specified inquiry.
      */
     public function show($id)
     {
@@ -63,11 +60,8 @@ class InquiryCRUDController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified inquiry in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
@@ -79,6 +73,8 @@ class InquiryCRUDController extends Controller
             $inquiry = Inquiry::find($id);
             $inquiry->comment = $request->comment;
             $inquiry->status = $request->status;
+
+            //including priority and escalation level?
 
             $saved = $inquiry->save();
 
