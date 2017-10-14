@@ -35,6 +35,7 @@ class InquiryCRUDController extends Controller
             $inquiry->status = $request->status;
             $inquiry->priority = $request->priority;
             $inquiry->level = $request->level;
+            $inquiry->esc_requested = $request->esc_requested;
 
             $saved = $inquiry->save();
 
