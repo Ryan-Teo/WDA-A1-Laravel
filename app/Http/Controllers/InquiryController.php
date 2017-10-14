@@ -46,6 +46,9 @@ class InquiryController extends Controller
         $inquiry->comment = $request->comment;
         $inquiry->description = $request->description;
         $inquiry->status = $request->status;
+        $inquiry->priority = "";
+        $inquiry->level = 0;
+        $inquiry->esc_requested = false;
 
         $inquiry->user()->associate($user);
 
