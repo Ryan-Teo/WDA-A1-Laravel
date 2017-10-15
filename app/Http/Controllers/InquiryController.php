@@ -49,6 +49,7 @@ class InquiryController extends Controller
         $inquiry->priority = null;
         $inquiry->level = 0;
         $inquiry->esc_requested = false;
+        $inquiry->is_closed = false;
 
         $inquiry->user()->associate($user);
 
@@ -64,7 +65,7 @@ class InquiryController extends Controller
      */
     public function index(Request $request)
     {
-        $inquiries = Inquiry::orderBy('id','DESC')->paginate(5);
+        $inquiries = Inquiry::orderBy('id')->paginate(5);
         return view('inquiries.index',compact('inquiries')) ->with('i', ($request->input('page', 1) - 1) * 5);
 
     }

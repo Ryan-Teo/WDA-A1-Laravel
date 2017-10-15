@@ -16,7 +16,7 @@
         @endif
         <table class="table table-bordered">
             <tr>
-                <th>No</th>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Operating System</th>
@@ -26,7 +26,7 @@
             </tr>
             @foreach ($inquiries as $inquiry)
                 <tr>
-                    <td>{{ ++$i }}</td>
+                    <td>{{  $inquiry->id }}</td>
                     <td>{{ $inquiry->user_name}}</td>
                     <td>{{ $inquiry->user_email}}</td>
                     <td>{{ $inquiry->os}}</td>

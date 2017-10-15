@@ -30,7 +30,7 @@
             <td>{{ $inquiry['description']}}</td>
         </tr><tr>
             <th>Comment</th>
-            <td>{{ $inquiry['comment']}}</td>
+            <td>{!! $inquiry['comment'] !!}</td>
         </tr>
         <tr>
             <th>Status</th>
