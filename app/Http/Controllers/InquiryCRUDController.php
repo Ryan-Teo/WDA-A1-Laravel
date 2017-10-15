@@ -74,6 +74,9 @@ class InquiryCRUDController extends Controller
             $inquiry = Inquiry::find($id);
             $inquiry->comment = $request->comment;
             $inquiry->status = $request->status;
+            $inquiry->priority = $request->priority;
+            $inquiry->level = $request->level;
+            $inquiry->esc_requested = $request->esc_requested;
 
             //including priority and escalation level?
 
