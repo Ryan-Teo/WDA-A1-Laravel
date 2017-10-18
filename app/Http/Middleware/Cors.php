@@ -13,11 +13,58 @@ class Cors
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
-    {
-        return $next($request)
-            ->header('Access-Control-Allow-Origin', '*')
-            ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//    public function handle($request, Closure $next)
+//    {
+//        return $next($request)
+//            ->header('Access-Control-Allow-Origin', '*')
+//            ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//
+//    }
 
+    public function handle($request, Closure $next) {
+//
+//        header('Access-Control-Allow-Origin: *');
+        // ALLOW OPTIONS METHOD
+        $headers = [
+            'Access-Control-Allow-Methods'=> 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers' => 'Origin, Content-Type'
+        ];
+
+        if ($request->getMethod() != "OPTIONS") {
+            return $next($request);
+        }
+
+        $response = $next($request);
+
+        foreach ($headers as $key => $value) {
+            $response->header($key, $value);
+        }
+
+        return $response;
     }
+
+//
+//    public function handle($request, Closure $next)
+//    {
+//        header('Access-Control-Allow-Origin: *');
+//        header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+//        header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
+//
+//        // ALLOW OPTIONS METHOD
+//        $headers = [
+//            'Access-Control-Allow-Methods'=> 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+//            'Access-Control-Allow-Headers'=> 'Accept, Content-Type, X-Auth-Token, Origin, Authorization'
+//        ];
+//        if($request->getMethod() == "OPTIONS") {
+//            // The client-side application can set only headers allowed in Access-Control-Allow-Headers
+//            return Response::make('OK', 200, $headers);
+//        }
+//
+//        $response = $next($request);
+//        foreach($headers as $key => $value)
+//            $response->header($key, $value);
+//        return $response;
+//    }
 }
+
+

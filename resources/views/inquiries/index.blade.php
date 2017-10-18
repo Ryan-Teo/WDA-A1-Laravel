@@ -26,7 +26,7 @@
             </tr>
             @foreach ($inquiries as $inquiry)
                 <tr>
-                    <td>{{  $inquiry->id }}</td>
+                    <td>{{ $inquiry->id }}</td>
                     <td>{{ $inquiry->user_name}}</td>
                     <td>{{ $inquiry->user_email}}</td>
                     <td>{{ $inquiry->os}}</td>
